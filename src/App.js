@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import RecipeList from './components/RecipeList';
 import RecipeForm from './components/RecipeForm';
+import { Link } from 'react-router-dom';
 
 const App = () => {
   const [recipes, setRecipes] = useState([]);
@@ -37,6 +38,11 @@ const App = () => {
   return (
     <div>
       <h1>Recipe App</h1>
+      <nav>
+        <ul>
+          <li><Link to="/favorites">Favorites</Link></li>
+        </ul>
+      </nav>
       <RecipeList
         recipes={recipes}
         favorites={favorites}

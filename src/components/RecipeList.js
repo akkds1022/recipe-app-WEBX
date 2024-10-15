@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './RecipeList.css'; // Importing custom CSS for the cards
 
+
 const RecipeList = ({ recipes, addToFavorites, removeFromFavorites, deleteRecipe }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -30,9 +31,17 @@ const RecipeList = ({ recipes, addToFavorites, removeFromFavorites, deleteRecipe
               <h2 className="recipe-title">{recipe.name}</h2>
               <p className="recipe-ingredients">{recipe.ingredients}</p>
               <div className="recipe-actions">
-                <button onClick={() => addToFavorites(recipe)} className="btn btn-add">
+              <button
+                  onClick={() => {
+                    addToFavorites(recipe);
+                    alert('Added to Favorites');
+                    
+                  }}
+                  className="btn btn-add"
+                >
                   Add to Favorites
                 </button>
+
                 <button onClick={() => removeFromFavorites(recipe.id)} className="btn btn-remove">
                   Remove from Favorites
                 </button>

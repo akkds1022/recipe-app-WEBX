@@ -4,5 +4,125 @@
     "name": "Biryani",
     "ingredients": "Rice, Chicken, Spices",
     "photo": "biryani.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Paneer Butter Masala",
+    "ingredients": "Paneer, Butter, Tomatoes, Cream",
+    "photo": "paneer-butter-masala.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Masala Dosa",
+    "ingredients": "Rice, Urad Dal, Potato, Onion, Spices",
+    "photo": "masala-dosa.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Chole Bhature",
+    "ingredients": "Chickpeas, Flour, Spices",
+    "photo": "chole-bhature.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Rajma",
+    "ingredients": "Kidney Beans, Onion, Tomato, Spices",
+    "photo": "rajma.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Palak Paneer",
+    "ingredients": "Spinach, Paneer, Cream, Spices",
+    "photo": "palak-paneer.jpg"
+  },
+  {
+    "id": "7",
+    "name": "Daal Tadka",
+    "ingredients": "Lentils, Onion, Garlic, Spices",
+    "photo": "dal-tadka.jpg"
+  },
+  {
+    "id": "8",
+    "name": "Aloo Paratha",
+    "ingredients": "Potato, Flour, Spices",
+    "photo": "aloo-paratha.jpg"
+  },
+  {
+    "id": "9",
+    "name": "Tandoori Chicken",
+    "ingredients": "Chicken, Yogurt, Spices",
+    "photo": "tandoori-chicken.jpg"
+  },
+  {
+    "id": "10",
+    "name": "Pani Puri",
+    "ingredients": "Flour, Potato, Tamarind, Chickpeas",
+    "photo": "pani-puri.jpg"
+  },
+  {
+    "id": "11",
+    "name": "Kadhi Pakora",
+    "ingredients": "Gram Flour, Yogurt, Spices",
+    "photo": "kadhi-pakora.jpg"
+  },
+  {
+    "id": "12",
+    "name": "Butter Chicken",
+    "ingredients": "Chicken, Butter, Cream, Tomatoes",
+    "photo": "butter-chicken.jpg"
+  },
+  {
+    "id": "13",
+    "name": "Idli",
+    "ingredients": "Rice, Urad Dal, Water",
+    "photo": "idli.jpg"
+  },
+  {
+    "id": "14",
+    "name": "Sambar",
+    "ingredients": "Lentils, Tamarind, Vegetables, Spices",
+    "photo": "sambar.jpg"
+  },
+  {
+    "id": "15",
+    "name": "Malai Kofta",
+    "ingredients": "Paneer, Potatoes, Cream, Spices",
+    "photo": "malai-kofta.jpg"
+  },
+  {
+    "id": "16",
+    "name": "Pav Bhaji",
+    "ingredients": "Mixed Vegetables, Pav Bread, Spices",
+    "photo": "pav-bhaji.jpg"
+  },
+  {
+    "id": "17",
+    "name": "Aloo Gobi",
+    "ingredients": "Potato, Cauliflower, Spices",
+    "photo": "aloo-gobi.jpg"
+  },
+  {
+    "id": "18",
+    "name": "Gulab Jamun",
+    "ingredients": "Milk Solids, Flour, Sugar Syrup",
+    "photo": "gulab-jamun.jpg"
+  },
+  {
+    "id": "19",
+    "name": "Dhokla",
+    "ingredients": "Gram Flour, Yogurt, Spices",
+    "photo": "dhokla.jpg"
+  },
+  {
+    "id": "20",
+    "name": "Chicken Korma",
+    "ingredients": "Chicken, Yogurt, Almonds, Spices",
+    "photo": "chicken-korma.jpg"
+  },
+  {
+    "id": "1729000819637",
+    "name": "manchurian dry",
+    "ingredients": "cauliflower, maida, shcezwan sauce",
+    "photo": "manchurian.jpg"
   }
 ]

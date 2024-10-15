@@ -1,0 +1,94 @@
+/* Recipe Container */
+.recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Recipe Card */
+  .recipe-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    width: 300px;
+  }
+  
+  .recipe-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Recipe Image */
+  .recipe-photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Recipe Info */
+  .recipe-info {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Recipe Title */
+  .recipe-title {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Recipe Ingredients */
+  .recipe-ingredients {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  /* Recipe Actions */
+  .recipe-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .recipe-actions .btn {
+    border: none;
+    padding: 10px 15px;
+    font-size: 0.9em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button Styles */
+  .btn-add {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .btn-add:hover {
+    background-color: #218838;
+  }
+  
+  .btn-remove {
+    background-color: #ffc107;
+    color: white;
+  }
+  
+  .btn-remove:hover {
+    background-color: #e0a800;
+  }
+  
+  .btn-delete {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .btn-delete:hover {
+    background-color: #c82333;
+  }
+  

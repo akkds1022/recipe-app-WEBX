@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import RecipeList from './components/RecipeList';
+import RecipeForm from './components/RecipeForm';
 
-function App() {
+const App = () => {
+  const [recipes, setRecipes] = useState([]);
+  const [favorites, setFavorites] = useState([]);
+
+  // Fetch recipes from the backend
+  useEffect(() => {
+    axios.get('http://localhost:5000/recipes')
+      .then(response => setRecipes(response.data))
+      .catch(error => console.error(error));
+  }, []);
+
+  const addToFavorites = (recipe) => {
+    setFavorites([...favorites, recipe]);
+  };
+
+  const removeFromFavorites = (id) => {
+    setFavorites(favorites.filter(recipe => recipe.id !== id));
+  };
+
+  const addRecipe = (newRecipe) => {
+    axios.post('http://localhost:5000/recipes', newRecipe)
+      .then(response => setRecipes([...recipes, response.data]))
+      .catch(error => console.error(error));
+  };
+
+  const deleteRecipe = (id) => {
+    axios.delete(`http://localhost:5000/recipes/${id}`)
+      .then(() => setRecipes(recipes.filter(recipe => recipe.id !== id)))
+      .catch(error => console.error(error));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Recipe App</h1>
+      <RecipeList
+        recipes={recipes}
+        favorites={favorites}
+        addToFavorites={addToFavorites}
+        removeFromFavorites={removeFromFavorites}
+        deleteRecipe={deleteRecipe}
+      />
+      <RecipeForm addRecipe={addRecipe} />
     </div>
   );
-}
+};
 
 export default App;

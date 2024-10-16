@@ -12,24 +12,6 @@
     "photo": "chole-bhature.jpg"
   },
   {
-    "id": "6",
-    "name": "Palak Paneer",
-    "ingredients": "Spinach, Paneer, Cream, Spices",
-    "photo": "palak-paneer.jpg"
-  },
-  {
-    "id": "7",
-    "name": "Daal Tadka",
-    "ingredients": "Lentils, Onion, Garlic, Spices",
-    "photo": "dal-tadka.jpg"
-  },
-  {
-    "id": "10",
-    "name": "Pani Puri",
-    "ingredients": "Flour, Potato, Tamarind, Chickpeas",
-    "photo": "pani-puri.jpg"
-  },
-  {
     "id": "11",
     "name": "Kadhi Pakora",
     "ingredients": "Gram Flour, Yogurt, Spices",
@@ -81,6 +63,18 @@
     "id": "1729011898384",
     "name": "egg omlete",
     "ingredients": "egg, onion, chilli",
+    "photo": ""
+  },
+  {
+    "id": "1729053884255",
+    "name": "rasgulla",
+    "ingredients": "cottage cheese,sugar syrup, ",
+    "photo": ""
+  },
+  {
+    "id": "1729071940434",
+    "name": "misti doi",
+    "ingredients": "sugar,dahi",
     "photo": ""
   }
 ]

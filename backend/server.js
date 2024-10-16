@@ -4,9 +4,11 @@ const fs = require('fs');
 const cors = require('cors');
 const app = express();
 const PORT = 5000;
+const path = require('path');
 
 app.use(bodyParser.json());
 app.use(cors());
+app.use(express.static('public'));
 
 const recipesFile = './recipes.json';
 
@@ -25,6 +27,24 @@ app.get('/recipes', (req, res) => {
     const recipes = readRecipes();
     res.json(recipes);
 });
+
+app.get('/favorites', (req, res) => {
+    const filePath = path.join(__dirname, 'favorites.json');
+    fs.readFile(filePath, 'utf8', (err, data) => {
+      if (err) {
+        console.error('Error reading the JSON file:', err);
+        return res.status(500).json({ error: 'Failed to load favorites' });
+      }
+      try {
+        res.json(JSON.parse(data));
+      } catch (parseError) {
+        console.error('Error parsing JSON:', parseError);
+        return res.status(500).json({ error: 'Failed to parse favorites data' });
+      }
+    });
+  });
+
+  
 
 // Add a new recipe
 app.post('/recipes', (req, res) => {

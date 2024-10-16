@@ -1,0 +1,15 @@
+[
+    {
+        "id": "3",
+        "name": "Masala Dosa",
+        "ingredients": "Rice, Urad Dal, Potato, Onion, Spices",
+        "photo": "masala-dosa.jpg"
+      },
+      {
+        "id": "4",
+        "name": "Chole Bhature",
+        "ingredients": "Chickpeas, Flour, Spices",
+        "photo": "chole-bhature.jpg"
+      }
+  ]
+  

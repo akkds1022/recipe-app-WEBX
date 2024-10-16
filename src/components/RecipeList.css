@@ -91,4 +91,9 @@
   .btn-delete:hover {
     background-color: #c82333;
   }
+
+  .search-bar{
+    width: 800px;
+    height: 150px;
+  }
   

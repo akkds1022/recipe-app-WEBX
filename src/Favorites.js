@@ -4,26 +4,40 @@ const Favorites = () => {
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
-    // Fetch the favorite recipes from the backend
-    fetch('/api/favorites')
-      .then((response) => response.json())
-      .then((data) => setFavorites(data));
+    fetch('/favorites')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data); // Check the structure of the fetched data
+        setFavorites(data);
+      })
+      .catch((error) => {
+        console.error('Error fetching the favorites:', error);
+      });
   }, []);
 
   return (
     <div className="favorites-page">
       <h1>Your Favorite Recipes</h1>
-      <div className="recipe-container">
-        {favorites.map((recipe) => (
-          <div className="recipe-card" key={recipe.id}>
-            <img src={`images/${recipe.photo}`} alt={recipe.name} className="recipe-photo" />
-            <div className="recipe-info">
-              <h2 className="recipe-title">{recipe.name}</h2>
-              <p className="recipe-ingredients">{recipe.ingredients}</p>
+      {favorites.length === 0 ? (
+        <p>No favorite recipes found.</p>
+      ) : (
+        <div className="recipe-container">
+          {favorites.map((recipe) => (
+            <div className="recipe-card" key={recipe.id}>
+              <img src={`images/${recipe.photo}`} alt={recipe.name} className="recipe-photo" />
+              <div className="recipe-info">
+                <h2 className="recipe-title">{recipe.name}</h2>
+                <p className="recipe-ingredients">{recipe.ingredients}</p>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

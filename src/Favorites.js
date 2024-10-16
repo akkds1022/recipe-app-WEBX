@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const Favorites = () => {
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
-    // Fetch the favorite recipes from the backend
-    fetch('/api/favorites')
-      .then((response) => response.json())
-      .then((data) => setFavorites(data));
+    axios.get('http://localhost:5000/favorites')
+      .then(response => setFavorites(response.data))
+      .catch(error => console.error('Failed to fetch favorites', error));
   }, []);
 
   return (
-    <div className="favorites-page">
-      <h1>Your Favorite Recipes</h1>
+    <div>
+      <h1>Favorites</h1>
       <div className="recipe-container">
         {favorites.map((recipe) => (
           <div className="recipe-card" key={recipe.id}>

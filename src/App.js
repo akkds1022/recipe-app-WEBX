@@ -49,10 +49,12 @@ const App = () => {
     }
   }, []);
   
-  const handleLogin = () => {
+  const handleLogin = (userId) => {
     setIsLoggedIn(true);
     localStorage.setItem('isLoggedIn', 'true');
+    localStorage.setItem('userId', userId); // Store user ID
   };
+  
   
   const handleLogout = () => {
     setIsLoggedIn(false);

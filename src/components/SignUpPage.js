@@ -1,41 +1,44 @@
 import React, { useState } from 'react';
-import './SignUpPage.css'; // Import the CSS file
 
 const SignUpPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle sign-up logic here (e.g., save to localStorage)
+  const handleSignUp = () => {
+    // Get existing users from local storage
+    const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+
+    // Check if the username already exists
+    if (existingUsers.some(user => user.username === username)) {
+      alert('Username already exists. Please choose another one.');
+      return;
+    }
+
+    // Add new user to the array
+    const newUser = { username, password };
+    existingUsers.push(newUser);
+
+    // Store updated users array in local storage
+    localStorage.setItem('users', JSON.stringify(existingUsers));
+    alert('Sign up successful!');
   };
 
   return (
-    <div className="signup-container">
-      <div className="signup-card">
-        <h2>Sign Up</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label>Username</label>
-            <input
-              type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label>Password</label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
-          <button type="submit" className="signup-button">Sign Up</button>
-        </form>
-      </div>
+    <div>
+      <h1>Sign Up</h1>
+      <input 
+        type="text" 
+        placeholder="Username" 
+        value={username} 
+        onChange={(e) => setUsername(e.target.value)} 
+      />
+      <input 
+        type="password" 
+        placeholder="Password" 
+        value={password} 
+        onChange={(e) => setPassword(e.target.value)} 
+      />
+      <button onClick={handleSignUp}>Sign Up</button>
     </div>
   );
 };

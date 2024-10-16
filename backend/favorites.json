@@ -12,15 +12,9 @@
     "photo": "chole-bhature.jpg"
   },
   {
-    "id": "11",
-    "name": "Kadhi Pakora",
-    "ingredients": "Gram Flour, Yogurt, Spices",
-    "photo": "kadhi-pakora.jpg"
-  },
-  {
-    "id": "1729011898384",
-    "name": "egg omlete",
-    "ingredients": "egg, onion, chilli",
-    "photo": ""
+    "id": "18",
+    "name": "Gulab Jamun",
+    "ingredients": "Milk Solids, Flour, Sugar Syrup",
+    "photo": "gulab-jamun.jpg"
   }
 ]

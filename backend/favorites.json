@@ -16,5 +16,11 @@
     "name": "Kadhi Pakora",
     "ingredients": "Gram Flour, Yogurt, Spices",
     "photo": "kadhi-pakora.jpg"
+  },
+  {
+    "id": "1729011898384",
+    "name": "egg omlete",
+    "ingredients": "egg, onion, chilli",
+    "photo": ""
   }
 ]

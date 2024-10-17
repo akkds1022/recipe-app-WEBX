@@ -7,8 +7,24 @@ const LoginPage = ({ handleLogin }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleLogin();
-    // Handle login logic here (check if user exists, etc.)
+
+    // Retrieve user from localStorage
+    const storedUser = localStorage.getItem(username);
+    
+    if (!storedUser) {
+      alert('User does not exist. Please sign up first.');
+      return;
+    }
+
+    const parsedUser = JSON.parse(storedUser);
+
+    // Validate the password
+    if (parsedUser.password === password) {
+      handleLogin();
+      alert('Login successful!');
+    } else {
+      alert('Incorrect password. Please try again.');
+    }
   };
 
   return (

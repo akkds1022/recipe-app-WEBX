@@ -7,10 +7,11 @@ import LoginPage from './components/LoginPage';
 import SignUpPage from './components/SignUpPage';
 import Favorites from './Favorites';
 import './App.css';
+
 const App = () => {
   const [recipes, setRecipes] = useState([]);
   const [favorites, setFavorites] = useState([]);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   // Fetch recipes from the backend
   useEffect(() => {
@@ -48,12 +49,12 @@ const App = () => {
       setIsLoggedIn(true);
     }
   }, []);
-  
+
   const handleLogin = () => {
     setIsLoggedIn(true);
     localStorage.setItem('isLoggedIn', 'true');
   };
-  
+
   const handleLogout = () => {
     setIsLoggedIn(false);
     localStorage.setItem('isLoggedIn', 'false');
@@ -61,24 +62,26 @@ const App = () => {
 
   return (
     <div>
-      <h1>Recipe App</h1>
       <nav className="navbar">
-      <div className="nav-left">
-        <Link to="/" className="nav-logo">Recipe App</Link>
-      </div>
-      <div className="nav-links">
-        <Link to="/" className="nav-link">Home</Link>
-        <Link to="/favourites" className="nav-link">Favourites</Link>
-        {isLoggedIn ? (
-          <button onClick={handleLogout} className="nav-button">Logout</button>
-        ) : (
-          <>
-            <Link to="/login" className="nav-link">Login</Link>
-            <Link to="/signup" className="nav-link">Sign Up</Link>
-          </>
-        )}
-      </div>
-    </nav>
+        <div className="nav-left">
+          <Link to="/" className="nav-logo">Recipe App</Link>
+        </div>
+        <div className="nav-links">
+          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/favourites" className="nav-link">Favourites</Link>
+          {isLoggedIn ? (
+            <>
+              <Link to="/add-recipe" className="nav-link">Add Recipe</Link>
+              <button onClick={handleLogout} className="nav-button">Logout</button>
+            </>
+          ) : (
+            <>
+              <Link to="/login" className="nav-link">Login</Link>
+              <Link to="/signup" className="nav-link">Sign Up</Link>
+            </>
+          )}
+        </div>
+      </nav>
 
       {/* Routing */}
       <Routes>

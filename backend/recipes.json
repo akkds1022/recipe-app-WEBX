@@ -42,12 +42,6 @@
     "photo": "malai-kofta.jpg"
   },
   {
-    "id": "16",
-    "name": "Pav Bhaji",
-    "ingredients": "Mixed Vegetables, Pav Bread, Spices",
-    "photo": "pav-bhaji.jpg"
-  },
-  {
     "id": "18",
     "name": "Gulab Jamun",
     "ingredients": "Milk Solids, Flour, Sugar Syrup",
@@ -63,18 +57,24 @@
     "id": "1729011898384",
     "name": "egg omlete",
     "ingredients": "egg, onion, chilli",
-    "photo": ""
+    "photo": "egg.jpg"
   },
   {
     "id": "1729053884255",
     "name": "rasgulla",
     "ingredients": "cottage cheese,sugar syrup, ",
-    "photo": ""
+    "photo": "rasgulla.jpeg"
   },
   {
-    "id": "1729071940434",
-    "name": "misti doi",
-    "ingredients": "sugar,dahi",
-    "photo": ""
+    "id": "1729086623157",
+    "name": "chips",
+    "ingredients": "potato",
+    "photo": "chips.jpg"
+  },
+  {
+    "id": "1729087405979",
+    "name": "pasta",
+    "ingredients": "pasta",
+    "photo": "pasta.jpeg"
   }
 ]

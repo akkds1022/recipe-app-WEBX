@@ -7,7 +7,17 @@ const SignUpPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle sign-up logic here (e.g., save to localStorage)
+    
+    // Check if the user already exists in localStorage
+    const existingUser = localStorage.getItem(username);
+    if (existingUser) {
+      alert('User already exists. Please log in.');
+      return;
+    }
+
+    // Save the user to localStorage
+    localStorage.setItem(username, JSON.stringify({ username, password }));
+    alert('Signup successful! Please log in.');
   };
 
   return (

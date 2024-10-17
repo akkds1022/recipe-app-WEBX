@@ -4,5 +4,11 @@
     "name": "Chole Bhature",
     "ingredients": "Chickpeas, Flour, Spices",
     "photo": "chole-bhature.jpg"
+  },
+  {
+    "id": "18",
+    "name": "Gulab Jamun",
+    "ingredients": "Milk Solids, Flour, Sugar Syrup",
+    "photo": "gulab-jamun.jpg"
   }
 ]
